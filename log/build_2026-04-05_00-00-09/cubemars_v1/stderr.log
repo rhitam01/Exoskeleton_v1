@@ -1,0 +1,5 @@
+  File "/home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1/hip_continous_pub.py", line 62
+    msg.data=(float)hip_angle
+                    ^^^^^^^^^
+SyntaxError: invalid syntax
+

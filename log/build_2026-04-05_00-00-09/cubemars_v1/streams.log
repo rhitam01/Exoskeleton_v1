@@ -1,0 +1,32 @@
+[0.629s] Invoking command in '/home/rhitam/exoskeleton-v1/src/cubemars_v1': PYTHONPATH=/home/rhitam/exoskeleton-v1/build/cubemars_v1/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cubemars_v1 build --build-base /home/rhitam/exoskeleton-v1/build/cubemars_v1/build install --record /home/rhitam/exoskeleton-v1/build/cubemars_v1/install.log --single-version-externally-managed install_data
+[0.782s] running egg_info
+[0.782s] writing ../../build/cubemars_v1/cubemars_v1.egg-info/PKG-INFO
+[0.782s] writing dependency_links to ../../build/cubemars_v1/cubemars_v1.egg-info/dependency_links.txt
+[0.782s] writing entry points to ../../build/cubemars_v1/cubemars_v1.egg-info/entry_points.txt
+[0.783s] writing requirements to ../../build/cubemars_v1/cubemars_v1.egg-info/requires.txt
+[0.783s] writing top-level names to ../../build/cubemars_v1/cubemars_v1.egg-info/top_level.txt
+[0.783s] reading manifest file '../../build/cubemars_v1/cubemars_v1.egg-info/SOURCES.txt'
+[0.784s] writing manifest file '../../build/cubemars_v1/cubemars_v1.egg-info/SOURCES.txt'
+[0.784s] running build
+[0.784s] running build_py
+[0.784s] copying cubemars_v1/hip_continous_pub.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+[0.784s] running install
+[0.784s] running install_lib
+[0.785s] copying /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1/hip_continous_pub.py -> /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1
+[0.785s] byte-compiling /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1/hip_continous_pub.py to hip_continous_pub.cpython-310.pyc
+[0.785s] running install_data
+[0.785s] running install_egg_info
+[0.785s]   File "/home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1/hip_continous_pub.py", line 62
+[0.785s]     msg.data=(float)hip_angle
+[0.786s]                     ^^^^^^^^^
+[0.786s] SyntaxError: invalid syntax
+[0.786s] 
+[0.786s] removing '/home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1-0.0.0-py3.10.egg-info' (and everything under it)
+[0.787s] Copying ../../build/cubemars_v1/cubemars_v1.egg-info to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1-0.0.0-py3.10.egg-info
+[0.787s] running install_scripts
+[0.799s] Installing encoder_pub script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.800s] Installing hip_const_pub script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.800s] Installing hip_cont_pub script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.800s] Installing hip_logger_sub script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.800s] writing list of installed files to '/home/rhitam/exoskeleton-v1/build/cubemars_v1/install.log'
+[0.812s] Invoked command in '/home/rhitam/exoskeleton-v1/src/cubemars_v1' returned '0': PYTHONPATH=/home/rhitam/exoskeleton-v1/build/cubemars_v1/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cubemars_v1 build --build-base /home/rhitam/exoskeleton-v1/build/cubemars_v1/build install --record /home/rhitam/exoskeleton-v1/build/cubemars_v1/install.log --single-version-externally-managed install_data

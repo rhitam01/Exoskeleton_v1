@@ -1,0 +1,60 @@
+running egg_info
+creating ../../build/nmotion_transport/nmotion_transport.egg-info
+writing ../../build/nmotion_transport/nmotion_transport.egg-info/PKG-INFO
+writing dependency_links to ../../build/nmotion_transport/nmotion_transport.egg-info/dependency_links.txt
+writing requirements to ../../build/nmotion_transport/nmotion_transport.egg-info/requires.txt
+writing top-level names to ../../build/nmotion_transport/nmotion_transport.egg-info/top_level.txt
+writing manifest file '../../build/nmotion_transport/nmotion_transport.egg-info/SOURCES.txt'
+reading manifest file '../../build/nmotion_transport/nmotion_transport.egg-info/SOURCES.txt'
+writing manifest file '../../build/nmotion_transport/nmotion_transport.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/rhitam/exoskeleton-v1/build/nmotion_transport/build
+creating /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib
+creating /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport
+copying nmotion_transport/__init__.py -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport
+creating /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core
+copying nmotion_transport/core/Driver.py -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core
+copying nmotion_transport/core/UsbInterface.py -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core
+copying nmotion_transport/core/Actuator.py -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core
+copying nmotion_transport/core/CanInterface.py -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core
+copying nmotion_transport/core/__init__.py -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core
+copying nmotion_transport/core/NCoder.py -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core
+copying nmotion_transport/core/utils.py -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core
+copying nmotion_transport/core/IMU.py -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core
+creating /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/lib
+copying nmotion_transport/core/lib/libnmotion_transport_python.cpython-39-x86_64-linux-gnu.so -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/lib
+copying nmotion_transport/core/lib/libnmotion_transport_python.cpython-38-x86_64-linux-gnu.so -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/lib
+copying nmotion_transport/core/lib/libnmotion_transport_python.cpython-310-x86_64-linux-gnu.so -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/lib
+copying nmotion_transport/core/lib/oss_licenses.txt -> /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/lib
+running install
+running install_lib
+creating /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/__init__.py -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport
+creating /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core
+creating /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/lib
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/lib/libnmotion_transport_python.cpython-39-x86_64-linux-gnu.so -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/lib
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/lib/oss_licenses.txt -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/lib
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/lib/libnmotion_transport_python.cpython-38-x86_64-linux-gnu.so -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/lib
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/lib/libnmotion_transport_python.cpython-310-x86_64-linux-gnu.so -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/lib
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/Driver.py -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/UsbInterface.py -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/Actuator.py -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/CanInterface.py -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/__init__.py -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/NCoder.py -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/utils.py -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core
+copying /home/rhitam/exoskeleton-v1/build/nmotion_transport/build/lib/nmotion_transport/core/IMU.py -> /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core
+byte-compiling /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/Driver.py to Driver.cpython-310.pyc
+byte-compiling /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/UsbInterface.py to UsbInterface.cpython-310.pyc
+byte-compiling /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/Actuator.py to Actuator.cpython-310.pyc
+byte-compiling /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/CanInterface.py to CanInterface.cpython-310.pyc
+byte-compiling /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/NCoder.py to NCoder.cpython-310.pyc
+byte-compiling /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/utils.py to utils.cpython-310.pyc
+byte-compiling /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport/core/IMU.py to IMU.cpython-310.pyc
+running install_egg_info
+Copying ../../build/nmotion_transport/nmotion_transport.egg-info to /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport-0.0.1-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/rhitam/exoskeleton-v1/build/nmotion_transport/install.log'

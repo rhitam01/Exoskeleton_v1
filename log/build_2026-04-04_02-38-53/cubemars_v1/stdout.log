@@ -1,0 +1,43 @@
+running egg_info
+creating ../../build/cubemars_v1/cubemars_v1.egg-info
+writing ../../build/cubemars_v1/cubemars_v1.egg-info/PKG-INFO
+writing dependency_links to ../../build/cubemars_v1/cubemars_v1.egg-info/dependency_links.txt
+writing entry points to ../../build/cubemars_v1/cubemars_v1.egg-info/entry_points.txt
+writing requirements to ../../build/cubemars_v1/cubemars_v1.egg-info/requires.txt
+writing top-level names to ../../build/cubemars_v1/cubemars_v1.egg-info/top_level.txt
+writing manifest file '../../build/cubemars_v1/cubemars_v1.egg-info/SOURCES.txt'
+reading manifest file '../../build/cubemars_v1/cubemars_v1.egg-info/SOURCES.txt'
+writing manifest file '../../build/cubemars_v1/cubemars_v1.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/rhitam/exoskeleton-v1/build/cubemars_v1/build
+creating /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib
+creating /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+copying cubemars_v1/hip_continous_pub.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+copying cubemars_v1/hip_logger_sub.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+copying cubemars_v1/hip_constant_pub.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+copying cubemars_v1/__init__.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+running install
+running install_lib
+creating /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1
+copying /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1/hip_continous_pub.py -> /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1
+copying /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1/hip_logger_sub.py -> /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1
+copying /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1/hip_constant_pub.py -> /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1
+copying /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1/__init__.py -> /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1
+byte-compiling /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1/hip_continous_pub.py to hip_continous_pub.cpython-310.pyc
+byte-compiling /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1/hip_logger_sub.py to hip_logger_sub.cpython-310.pyc
+byte-compiling /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1/hip_constant_pub.py to hip_constant_pub.cpython-310.pyc
+byte-compiling /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/rhitam/exoskeleton-v1/install/cubemars_v1/share/ament_index
+creating /home/rhitam/exoskeleton-v1/install/cubemars_v1/share/ament_index/resource_index
+creating /home/rhitam/exoskeleton-v1/install/cubemars_v1/share/ament_index/resource_index/packages
+copying resource/cubemars_v1 -> /home/rhitam/exoskeleton-v1/install/cubemars_v1/share/ament_index/resource_index/packages
+copying package.xml -> /home/rhitam/exoskeleton-v1/install/cubemars_v1/share/cubemars_v1
+running install_egg_info
+Copying ../../build/cubemars_v1/cubemars_v1.egg-info to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1-0.0.0-py3.10.egg-info
+running install_scripts
+Installing hip_const_pub script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+Installing hip_cont_pub script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+Installing hip_logger_sub script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+writing list of installed files to '/home/rhitam/exoskeleton-v1/build/cubemars_v1/install.log'

@@ -88,7 +88,12 @@ class HipLogger(Node):
     def const_callback(self, msg):
         self.hip_const = msg.data
     def enc_callback(self,msg):
-        self.enc_angle=msg.data
+        self.enc_angle = self._normalize_deg(msg.data)
+
+    @staticmethod
+    def _normalize_deg(angle_deg: float) -> float:
+        # Map any degree value to [-180, 180)
+        return ((angle_deg + 180.0) % 360.0) - 180.0
     def log_data(self):
         current_time = time.time() - self.start_time
         if self.hip_const is not None or self.hip_cont is not None:

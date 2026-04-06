@@ -6,12 +6,16 @@ from std_msgs.msg import Float32, Float32MultiArray
 import csv
 import os
 import time
+from datetime import datetime
 
 
 class HipLogger(Node):
 
     def __init__(self):
         super().__init__('hip_logger')
+        self.declare_parameter('log_root_dir', os.path.expanduser('~/exoskeleton_logs/hip'))
+        self.declare_parameter('run_name_pattern', 'hip_run_{date}_{time}')
+        self.declare_parameter('csv_filename', 'hip_log.csv')
 
         self.sub_cont = self.create_subscription(
             Float32MultiArray,
@@ -38,22 +42,7 @@ class HipLogger(Node):
         self.hip_const = None
         self.enc_angle=None
         self.csv_angle=None
-        
-        base_name = 'hip_log'
-        extension = '.csv'
-        counter = 0
-
-        while True:
-            if counter == 0:
-                file_name = f"{base_name}{extension}"
-            else:
-                file_name = f"{base_name}_{counter}{extension}"
-
-            if not os.path.exists(file_name):
-                self.file_path = file_name
-                break
-
-            counter += 1
+        self.file_path = self._build_log_file_path()
 
         if not os.path.isfile(self.file_path) or os.path.getsize(self.file_path) == 0:
             with open(self.file_path, 'w', newline='') as f:
@@ -68,11 +57,33 @@ class HipLogger(Node):
         self.start_time = time.time()
 
         self.timer = self.create_timer(0.03, self.log_data)
+        self.get_logger().info(f"Logging to: {self.file_path}")
+
+    def _build_log_file_path(self):
+        root_dir = self.get_parameter('log_root_dir').get_parameter_value().string_value
+        run_name_pattern = self.get_parameter('run_name_pattern').get_parameter_value().string_value
+        csv_filename = self.get_parameter('csv_filename').get_parameter_value().string_value
+
+        now = datetime.now()
+        run_name = run_name_pattern.format(
+            date=now.strftime('%Y%m%d'),
+            time=now.strftime('%H%M%S')
+        )
+
+        run_dir = os.path.join(root_dir, run_name)
+        suffix = 1
+        while os.path.exists(run_dir):
+            run_dir = os.path.join(root_dir, f"{run_name}_{suffix}")
+            suffix += 1
+
+        os.makedirs(run_dir, exist_ok=False)
+        return os.path.join(run_dir, csv_filename)
 
  
     def cont_callback(self, msg):
-        self.hip_cont = msg.data[0]
-        self.csv_angle = msg.data[1]
+        if len(msg.data) >= 2:
+            self.hip_cont = msg.data[0]
+            self.csv_angle = msg.data[1]
 
     def const_callback(self, msg):
         self.hip_const = msg.data

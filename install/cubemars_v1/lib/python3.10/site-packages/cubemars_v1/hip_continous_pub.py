@@ -48,9 +48,9 @@ class Hip_Continous(Node):
         self.T_MIN = -144
         self.T_MAX = 144
 
-        self.KP = 200
-        self.KD = 5
-        self.VEL_CMD = 3
+        self.KP = 100
+        self.KD = 4
+        self.VEL_CMD = 0.01
         self.TORQ_FF = 0
         self.DT = 0.03
         threading.Thread(target=self.run_sequence, daemon=True).start()

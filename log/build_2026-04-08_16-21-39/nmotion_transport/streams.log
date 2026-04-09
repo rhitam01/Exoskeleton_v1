@@ -1,0 +1,18 @@
+[0.522s] Invoking command in '/home/rhitam/exoskeleton-v1/src/nmotion_transport': PYTHONPATH=/home/rhitam/exoskeleton-v1/build/nmotion_transport/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nmotion_transport build --build-base /home/rhitam/exoskeleton-v1/build/nmotion_transport/build install --record /home/rhitam/exoskeleton-v1/build/nmotion_transport/install.log --single-version-externally-managed
+[0.660s] running egg_info
+[0.669s] writing ../../build/nmotion_transport/nmotion_transport.egg-info/PKG-INFO
+[0.669s] writing dependency_links to ../../build/nmotion_transport/nmotion_transport.egg-info/dependency_links.txt
+[0.669s] writing requirements to ../../build/nmotion_transport/nmotion_transport.egg-info/requires.txt
+[0.669s] writing top-level names to ../../build/nmotion_transport/nmotion_transport.egg-info/top_level.txt
+[0.688s] reading manifest file '../../build/nmotion_transport/nmotion_transport.egg-info/SOURCES.txt'
+[0.689s] writing manifest file '../../build/nmotion_transport/nmotion_transport.egg-info/SOURCES.txt'
+[0.689s] running build
+[0.689s] running build_py
+[0.690s] running install
+[0.692s] running install_lib
+[0.701s] running install_egg_info
+[0.711s] removing '/home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport-0.0.1-py3.10.egg-info' (and everything under it)
+[0.711s] Copying ../../build/nmotion_transport/nmotion_transport.egg-info to /home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages/nmotion_transport-0.0.1-py3.10.egg-info
+[0.711s] running install_scripts
+[0.731s] writing list of installed files to '/home/rhitam/exoskeleton-v1/build/nmotion_transport/install.log'
+[0.743s] Invoked command in '/home/rhitam/exoskeleton-v1/src/nmotion_transport' returned '0': PYTHONPATH=/home/rhitam/exoskeleton-v1/build/nmotion_transport/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rhitam/exoskeleton-v1/install/nmotion_transport/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/nmotion_transport build --build-base /home/rhitam/exoskeleton-v1/build/nmotion_transport/build install --record /home/rhitam/exoskeleton-v1/build/nmotion_transport/install.log --single-version-externally-managed

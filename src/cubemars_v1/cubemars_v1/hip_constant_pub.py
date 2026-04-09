@@ -44,10 +44,14 @@ class Hip_Constant(Node):
         self.T_MIN = -144
         self.T_MAX = 144
 
-        self.KP = 40
-        self.KD = 5
+        self.HIP_KP = 500
+        self.HIP_KD = 5
+        self.HIP_TORQ_FF = 2
+#        self.KNEE_KP = 25
+        self.KNEE_KP = 500
+        self.KNEE_KD = 2
         self.VEL_CMD = 0.01
-        self.TORQ_FF = 0
+        self.KNEE_TORQ_FF = 0.5
         self.DT = 0.03
         threading.Thread(target=self.run_sequence, daemon=True).start()
     def timer_callback(self):
@@ -142,9 +146,15 @@ class Hip_Constant(Node):
 
 
     def send_command(self,motor_id, target):
+        if motor_id == self.MOTOR_ID_1:
+            kp, kd, tqff = self.HIP_KP, self.HIP_KD, self.HIP_TORQ_FF
+        elif motor_id == self.MOTOR_ID_2:
+            kp, kd, tqff = self.KNEE_KP, self.KNEE_KD, self.KNEE_TORQ_FF
+        else:
+            kp, kd, tqff = self.HIP_KP, self.HIP_KD, self.HIP_TORQ_FF
         self.bus.send(can.Message(
             arbitration_id=motor_id,
-            data=self.pack_cmd(target, self.VEL_CMD, self.KP, self.KD, self.TORQ_FF),
+            data=self.pack_cmd(target, self.VEL_CMD, kp, kd, tqff),
             is_extended_id=False
         ))
     def run_sequence(self):

@@ -48,10 +48,12 @@ class Hip_Continous(Node):
         self.T_MIN = -144
         self.T_MAX = 144
 
-        self.KP = 100
-        self.KD = 4
-        self.VEL_CMD = 0.01
-        self.TORQ_FF = 0
+        self.HIP_KP = 100
+        self.HIP_KD = 5
+        self.KNEE_KP = 50
+        self.KNEE_KD = 4
+        self.VEL_CMD = 0.0
+        self.TORQ_FF = 0.0
         self.DT = 0.03
         threading.Thread(target=self.run_sequence, daemon=True).start()
     def timer_callback(self):
@@ -121,7 +123,13 @@ class Hip_Continous(Node):
         self.bus.send(can.Message(arbitration_id=motor_id, data=[0xFF]*7 + [0xFD], is_extended_id=False))
 
     def send_command(self,motor_id, target):
-        self.bus.send(can.Message(arbitration_id=motor_id, data=self.pack_cmd(target, self.VEL_CMD, self.KP, self.KD, self.TORQ_FF), is_extended_id=False))
+        if motor_id == self.MOTOR_ID_1:
+            kp, kd = self.HIP_KP, self.HIP_KD
+        elif motor_id == self.MOTOR_ID_2:
+            kp, kd = self.KNEE_KP, self.KNEE_KD
+        else:
+            kp, kd = self.HIP_KP, self.HIP_KD
+        self.bus.send(can.Message(arbitration_id=motor_id, data=self.pack_cmd(target, self.VEL_CMD, kp, kd, self.TORQ_FF), is_extended_id=False))
     def run_sequence(self):
 
         try:

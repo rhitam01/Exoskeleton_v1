@@ -42,12 +42,13 @@ class HipLogger(Node):
         self.hip_const = None
         self.enc_angle=None
         self.csv_angle=None
+        self.row_counter = 0
         self.file_path = self._build_log_file_path()
 
         if not os.path.isfile(self.file_path) or os.path.getsize(self.file_path) == 0:
             with open(self.file_path, 'w', newline='') as f:
                 writer = csv.writer(f)
-                writer.writerow(['time', 'hip_cont_angle','encoder_hip_angle','csv_hip_angle'])
+                writer.writerow(['row_counter', 'time', 'hip_cont_angle','encoder_hip_angle','csv_hip_angle'])
 
     
         self.file = open(self.file_path, 'a', newline='')

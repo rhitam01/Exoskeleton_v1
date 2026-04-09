@@ -1,12 +1,13 @@
-Metadata-Version: 2.1
-Name: nmotion-transport
+Metadata-Version: 2.4
+Name: nmotion_transport
 Version: 0.0.1
 Summary: Nmotion transport library for ROS2
-Home-page: UNKNOWN
 Maintainer: NMotion
 Maintainer-email: amarnath@nmotion.in
 License: Apache-2.0
-Platform: UNKNOWN
-
-UNKNOWN
-
+Requires-Dist: setuptools
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: summary

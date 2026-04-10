@@ -1,4 +1,7 @@
 setuptools
+numpy
+matplotlib
+python-can
 
 [test]
 pytest

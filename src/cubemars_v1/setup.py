@@ -15,7 +15,7 @@ setup(
             glob('data/*')
         ),
 ],
-    install_requires=['setuptools'],
+    install_requires=['setuptools', 'numpy', 'matplotlib', 'python-can'],
     zip_safe=True,
     maintainer='rudhratej',
     maintainer_email='rudhratejsingh6@gmail.com',
@@ -32,6 +32,7 @@ setup(
         'hip_cont_pub=cubemars_v1.hip_continous_pub:main',
         'hip_logger_sub=cubemars_v1.hip_logger_sub:main',
         'encoder_pub=cubemars_v1.encoder_hip_pub:main',
+        'joint_traj_exec=cubemars_v1.joint_trajectory_exec:main',
         ],
     },
 )

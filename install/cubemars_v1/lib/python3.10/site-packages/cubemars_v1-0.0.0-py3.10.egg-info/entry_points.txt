@@ -3,3 +3,4 @@ encoder_pub = cubemars_v1.encoder_hip_pub:main
 hip_const_pub = cubemars_v1.hip_constant_pub:main
 hip_cont_pub = cubemars_v1.hip_continous_pub:main
 hip_logger_sub = cubemars_v1.hip_logger_sub:main
+joint_traj_exec = cubemars_v1.joint_trajectory_exec:main

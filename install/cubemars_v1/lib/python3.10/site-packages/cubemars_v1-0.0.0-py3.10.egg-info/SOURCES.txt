@@ -14,6 +14,7 @@ cubemars_v1/hip_constant_pub.py
 cubemars_v1/hip_continous_pub.py
 cubemars_v1/hip_logger_sub.py
 cubemars_v1/joint_trajectory_exec.py
+cubemars_v1/joint_trajectory_freq_analysis.py
 data/anikait_hip_knee_angles.xlsx
 launch/hip_system.launch.py
 resource/cubemars_v1

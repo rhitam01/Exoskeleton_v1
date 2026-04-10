@@ -51,10 +51,10 @@ class JointTrajectoryExec(Node):
         self.T_MIN = -144.0
         self.T_MAX = 144.0
 
-        self.HIP_KP = 70.0
+        self.HIP_KP = 500.0
         self.HIP_KD = 5.0
-        self.KNEE_KP = 40.0
-        self.KNEE_KD = 4.0
+        self.KNEE_KP = 500.0
+        self.KNEE_KD = 5.0
         self.TORQ_FF = 0.0
 
         can.rc["interface"] = "socketcan"
@@ -89,7 +89,7 @@ class JointTrajectoryExec(Node):
         hip_interp = np.interp(t_uniform, t_src, hip_src)
         knee_interp = np.interp(t_uniform, t_src, knee_src)
 
-        win = 7
+        win = 14
         kernel = np.ones(win) / float(win)
         hip_smooth = np.convolve(hip_interp, kernel, mode="same")
         knee_smooth = np.convolve(knee_interp, kernel, mode="same")
@@ -178,6 +178,19 @@ class JointTrajectoryExec(Node):
             feedback[motor_id] = {"pos": pos, "vel": vel}
         return feedback
 
+    @staticmethod
+    def _gain_token(value):
+        """Encode a gain for use in filenames (no dots or minus sign issues on all FS)."""
+        t = f"{float(value):g}"
+        return t.replace("-", "m").replace(".", "p")
+
+    def _angles_csv_basename(self):
+        hkp = self._gain_token(self.HIP_KP)
+        hkd = self._gain_token(self.HIP_KD)
+        kkp = self._gain_token(self.KNEE_KP)
+        kkd = self._gain_token(self.KNEE_KD)
+        return f"joint_angles_hipkp{hkp}_hipkd{hkd}_kneekp{kkp}_kneekd{kkd}.csv"
+
     def save_timeseries_and_plots(
         self,
         run_dir,
@@ -222,6 +235,29 @@ class JointTrajectoryExec(Node):
                     ]
                 )
 
+        angles_csv_path = os.path.join(run_dir, self._angles_csv_basename())
+        with open(angles_csv_path, "w", newline="") as csv_file:
+            writer = csv.writer(csv_file)
+            writer.writerow(
+                [
+                    "time_s",
+                    "hip_angle_cmd_deg",
+                    "hip_angle_executed_deg",
+                    "knee_angle_cmd_deg",
+                    "knee_angle_executed_deg",
+                ]
+            )
+            for i in range(len(t_log)):
+                writer.writerow(
+                    [
+                        t_log[i],
+                        hip_cmd_deg[i],
+                        hip_meas_deg[i],
+                        knee_cmd_deg[i],
+                        knee_meas_deg[i],
+                    ]
+                )
+
         angle_path = os.path.join(run_dir, "joint_angle_graph.png")
         velocity_path = os.path.join(run_dir, "joint_velocity_graph.png")
 
@@ -254,6 +290,7 @@ class JointTrajectoryExec(Node):
         plt.close()
 
         self.get_logger().info(f"Saved CSV log: {csv_path}")
+        self.get_logger().info(f"Saved angles CSV: {angles_csv_path}")
         self.get_logger().info(f"Saved angle plot: {angle_path}")
         self.get_logger().info(f"Saved velocity plot: {velocity_path}")
 

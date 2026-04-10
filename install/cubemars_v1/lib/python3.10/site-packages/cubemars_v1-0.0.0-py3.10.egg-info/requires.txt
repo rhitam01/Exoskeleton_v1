@@ -2,6 +2,9 @@ setuptools
 numpy
 matplotlib
 python-can
+pandas
+scipy
+openpyxl
 
 [test]
 pytest

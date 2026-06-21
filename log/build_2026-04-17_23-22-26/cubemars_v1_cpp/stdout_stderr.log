@@ -1,0 +1,66 @@
+-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.16 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+-- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+-- Found nmotion_transport_cpp: 0.0.1 (/home/rhitam/exoskeleton-v1/install/nmotion_transport_cpp/share/nmotion_transport_cpp/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rhitam/exoskeleton-v1/build/cubemars_v1_cpp
+Consolidate compiler generated dependencies of target hip_logger_sub
+Consolidate compiler generated dependencies of target encoder_pub
+[  7%] Building CXX object CMakeFiles/cubemars_can_utils.dir/src/can_utils.cpp.o
+[ 21%] Built target encoder_pub
+[ 35%] Built target hip_logger_sub
+[ 42%] Linking CXX static library libcubemars_can_utils.a
+[ 42%] Built target cubemars_can_utils
+Consolidate compiler generated dependencies of target hip_cont_pub
+Consolidate compiler generated dependencies of target joint_traj_exec
+Consolidate compiler generated dependencies of target hip_const_pub
+Consolidate compiler generated dependencies of target joint_traj_freq_analysis
+[ 50%] Building CXX object CMakeFiles/joint_traj_exec.dir/src/joint_trajectory_exec.cpp.o
+[ 57%] Building CXX object CMakeFiles/hip_cont_pub.dir/src/hip_continous_pub.cpp.o
+[ 64%] Building CXX object CMakeFiles/hip_const_pub.dir/src/hip_constant_pub.cpp.o
+[ 71%] Building CXX object CMakeFiles/joint_traj_freq_analysis.dir/src/joint_trajectory_freq_analysis.cpp.o
+[ 78%] Linking CXX executable joint_traj_exec
+[ 85%] Linking CXX executable joint_traj_freq_analysis
+[ 85%] Built target joint_traj_exec
+[ 85%] Built target joint_traj_freq_analysis
+[ 92%] Linking CXX executable hip_const_pub
+[100%] Linking CXX executable hip_cont_pub
+[100%] Built target hip_const_pub
+[100%] Built target hip_cont_pub
+-- Install configuration: ""
+-- Installing: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/lib/cubemars_v1_cpp/libcubemars_can_utils.a
+-- Installing: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/lib/cubemars_v1_cpp/hip_const_pub
+-- Set runtime path of "/home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/lib/cubemars_v1_cpp/hip_const_pub" to ""
+-- Installing: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/lib/cubemars_v1_cpp/hip_cont_pub
+-- Set runtime path of "/home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/lib/cubemars_v1_cpp/hip_cont_pub" to ""
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/lib/cubemars_v1_cpp/hip_logger_sub
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/lib/cubemars_v1_cpp/encoder_pub
+-- Installing: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/lib/cubemars_v1_cpp/joint_traj_exec
+-- Set runtime path of "/home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/lib/cubemars_v1_cpp/joint_traj_exec" to ""
+-- Installing: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/lib/cubemars_v1_cpp/joint_traj_freq_analysis
+-- Set runtime path of "/home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/lib/cubemars_v1_cpp/joint_traj_freq_analysis" to ""
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/launch
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/launch/hip_system.launch.py
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/ament_index/resource_index/package_run_dependencies/cubemars_v1_cpp
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/ament_index/resource_index/parent_prefix_path/cubemars_v1_cpp
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/environment/ament_prefix_path.sh
+-- Installing: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/environment/path.sh
+-- Installing: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/environment/path.dsv
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/local_setup.bash
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/local_setup.sh
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/local_setup.zsh
+-- Installing: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/local_setup.dsv
+-- Installing: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/package.dsv
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/ament_index/resource_index/packages/cubemars_v1_cpp
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/cmake/cubemars_v1_cppConfig.cmake
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/cmake/cubemars_v1_cppConfig-version.cmake
+-- Up-to-date: /home/rhitam/exoskeleton-v1/install/cubemars_v1_cpp/share/cubemars_v1_cpp/package.xml

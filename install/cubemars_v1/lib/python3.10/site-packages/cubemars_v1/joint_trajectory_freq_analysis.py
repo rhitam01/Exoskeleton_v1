@@ -1,15 +1,10 @@
 #!/usr/bin/env python3
-"""
-Same trajectory execution as joint_trajectory_exec, plus FFT-based
-command vs measured error analysis and transfer-function estimates.
-"""
 
 import csv
 import os
 import threading
 import time
 from datetime import datetime
-
 import can
 import matplotlib.pyplot as plt
 import numpy as np

@@ -12,9 +12,15 @@ cubemars_v1/__init__.py
 cubemars_v1/encoder_hip_pub.py
 cubemars_v1/hip_constant_pub.py
 cubemars_v1/hip_continous_pub.py
+cubemars_v1/hip_knee_sim_logger_sub.py
 cubemars_v1/hip_logger_sub.py
 cubemars_v1/joint_trajectory_exec.py
 cubemars_v1/joint_trajectory_freq_analysis.py
+cubemars_v1/matlab_torque_ctrl.py
+cubemars_v1/test1.py
+cubemars_v1/torqueControl1.py
+cubemars_v1/try_v1_v2.py
+data/Synthetic_Data.xlsx
 data/anikait_hip_knee_angles.xlsx
 launch/hip_system.launch.py
 resource/cubemars_v1

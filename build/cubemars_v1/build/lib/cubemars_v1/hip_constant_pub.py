@@ -44,12 +44,12 @@ class Hip_Constant(Node):
         self.T_MIN = -144
         self.T_MAX = 144
 
-        self.HIP_KP = 500
+        self.HIP_KP = 50
         self.HIP_KD = 5
-        self.HIP_TORQ_FF = 2
+        self.HIP_TORQ_FF = 1
 #        self.KNEE_KP = 25
-        self.KNEE_KP = 500
-        self.KNEE_KD = 2
+        self.KNEE_KP = 20
+        self.KNEE_KD = 3
         self.VEL_CMD = 0.01
         self.KNEE_TORQ_FF = 0.5
         self.DT = 0.03

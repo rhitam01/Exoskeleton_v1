@@ -21,10 +21,11 @@ class JointTrajectoryExec(Node):
 
         self.declare_parameter(
             "angles_file",
-            "/home/rhitam/exoskeleton-v1/src/cubemars_v1/data/anikait_hip_knee_angles.xlsx",
+            "/home/rhitam/exoskeleton-v1/src/cubemars_v1/data/Synthetic_Data.xlsx",
         )
         self.declare_parameter("run_tag", "with_trajectory")
-        self.declare_parameter("dt_s", 0.03)
+        # Fixed dt_s default to match dataset timestep (0.0096 s)
+        self.declare_parameter("dt_s", 0.0096)
         self.declare_parameter("can_channel", "can0")
         self.declare_parameter("can_bitrate", 1000000)
         self.declare_parameter("output_dir", os.path.expanduser("~/exoskeleton_logs/trajectory"))
@@ -51,10 +52,10 @@ class JointTrajectoryExec(Node):
         self.T_MIN = -144.0
         self.T_MAX = 144.0
 
-        self.HIP_KP = 500.0
-        self.HIP_KD = 5.0
-        self.KNEE_KP = 500.0
-        self.KNEE_KD = 5.0
+        self.HIP_KP = 20.0
+        self.HIP_KD = 2.5
+        self.KNEE_KP = 10.0
+        self.KNEE_KD = 2.5
         self.TORQ_FF = 0.0
 
         can.rc["interface"] = "socketcan"
@@ -70,9 +71,10 @@ class JointTrajectoryExec(Node):
 
     def load_source_angles(self):
         df = pd.read_excel(self.angles_file)
-        time_series = df["Dynamic"].to_numpy(dtype=float)
-        hip_angles = df["Left Hip Angles"].to_numpy(dtype=float)
-        knee_angles = df["Left Knee Angles"].to_numpy(dtype=float)
+        # Fixed column names to match dataset: Time, Hip_Angle, Knee_Angle
+        time_series = df["Time"].to_numpy(dtype=float)
+        hip_angles = df["Hip_Angle"].to_numpy(dtype=float)
+        knee_angles = df["Knee_Angle"].to_numpy(dtype=float)
         return time_series, hip_angles, knee_angles
 
     def generate_trajectory_from_file(self):
@@ -180,7 +182,6 @@ class JointTrajectoryExec(Node):
 
     @staticmethod
     def _gain_token(value):
-        """Encode a gain for use in filenames (no dots or minus sign issues on all FS)."""
         t = f"{float(value):g}"
         return t.replace("-", "m").replace(".", "p")
 
@@ -317,8 +318,10 @@ class JointTrajectoryExec(Node):
             if self.MOTOR_ID_2 not in home_pos:
                 home_pos[self.MOTOR_ID_2] = 0.0
 
-            hip_ref_abs_rad = home_pos[self.MOTOR_ID_1] + np.radians(self.hip_traj_deg)
-            knee_ref_abs_rad = home_pos[self.MOTOR_ID_2] + np.radians(self.knee_traj_deg)
+            # Negated to correct hip motor rotation direction
+            hip_ref_abs_rad = home_pos[self.MOTOR_ID_1] - np.radians(self.hip_traj_deg)
+            # Negated to correct knee motor rotation direction
+            knee_ref_abs_rad = home_pos[self.MOTOR_ID_2] - np.radians(self.knee_traj_deg)
             hip_vel_cmd = np.gradient(hip_ref_abs_rad, self.dt_s, edge_order=1)
             knee_vel_cmd = np.gradient(knee_ref_abs_rad, self.dt_s, edge_order=1)
 

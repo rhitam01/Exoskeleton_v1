@@ -1,0 +1,46 @@
+[0.585s] Invoking command in '/home/rhitam/exoskeleton-v1/src/cubemars_v1': PYTHONPATH=/home/rhitam/exoskeleton-v1/build/cubemars_v1/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cubemars_v1 build --build-base /home/rhitam/exoskeleton-v1/build/cubemars_v1/build install --record /home/rhitam/exoskeleton-v1/build/cubemars_v1/install.log --single-version-externally-managed install_data
+[0.743s] running egg_info
+[0.752s] writing ../../build/cubemars_v1/cubemars_v1.egg-info/PKG-INFO
+[0.753s] writing dependency_links to ../../build/cubemars_v1/cubemars_v1.egg-info/dependency_links.txt
+[0.753s] writing entry points to ../../build/cubemars_v1/cubemars_v1.egg-info/entry_points.txt
+[0.754s] writing requirements to ../../build/cubemars_v1/cubemars_v1.egg-info/requires.txt
+[0.754s] writing top-level names to ../../build/cubemars_v1/cubemars_v1.egg-info/top_level.txt
+[0.776s] reading manifest file '../../build/cubemars_v1/cubemars_v1.egg-info/SOURCES.txt'
+[0.777s] writing manifest file '../../build/cubemars_v1/cubemars_v1.egg-info/SOURCES.txt'
+[0.777s] running build
+[0.777s] running build_py
+[0.777s] copying cubemars_v1/hip_continous_pub.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+[0.778s] copying cubemars_v1/encoder_hip_pub.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+[0.778s] copying cubemars_v1/torqueControl1.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+[0.779s] copying cubemars_v1/matlab_torque_ctrl.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+[0.779s] copying cubemars_v1/hip_knee_sim_logger_sub.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+[0.779s] copying cubemars_v1/test1.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+[0.779s] copying cubemars_v1/hip_logger_sub.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+[0.780s] copying cubemars_v1/hip_constant_pub.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+[0.780s] copying cubemars_v1/joint_trajectory_exec.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+[0.780s] copying cubemars_v1/try_v1_v2.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+[0.781s] copying cubemars_v1/joint_trajectory_freq_analysis.py -> /home/rhitam/exoskeleton-v1/build/cubemars_v1/build/lib/cubemars_v1
+[0.781s] running install
+[0.784s] running install_lib
+[0.794s] running install_data
+[0.794s] copying package.xml -> /home/rhitam/exoskeleton-v1/install/cubemars_v1/share/cubemars_v1
+[0.795s] copying launch/hip_system.launch.py -> /home/rhitam/exoskeleton-v1/install/cubemars_v1/share/cubemars_v1/launch
+[0.795s] copying data/anikait_hip_knee_angles.xlsx -> /home/rhitam/exoskeleton-v1/install/cubemars_v1/share/cubemars_v1/data
+[0.795s] copying data/Synthetic_Data.xlsx -> /home/rhitam/exoskeleton-v1/install/cubemars_v1/share/cubemars_v1/data
+[0.796s] running install_egg_info
+[0.805s] removing '/home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1-0.0.0-py3.10.egg-info' (and everything under it)
+[0.806s] Copying ../../build/cubemars_v1/cubemars_v1.egg-info to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages/cubemars_v1-0.0.0-py3.10.egg-info
+[0.806s] running install_scripts
+[0.826s] Installing encoder_pub script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.826s] Installing hip_const_pub script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.826s] Installing hip_cont_pub script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.826s] Installing hip_knee_sim_logger_sub script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.826s] Installing hip_logger_sub script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.826s] Installing joint_traj_exec script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.826s] Installing joint_traj_freq_analysis script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.826s] Installing matlab_test1 script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.826s] Installing matlab_torque_ctrl script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.826s] Installing singl_motor_test script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.826s] Installing v1v2 script to /home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/cubemars_v1
+[0.827s] writing list of installed files to '/home/rhitam/exoskeleton-v1/build/cubemars_v1/install.log'
+[0.841s] Invoked command in '/home/rhitam/exoskeleton-v1/src/cubemars_v1' returned '0': PYTHONPATH=/home/rhitam/exoskeleton-v1/build/cubemars_v1/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rhitam/exoskeleton-v1/install/cubemars_v1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/cubemars_v1 build --build-base /home/rhitam/exoskeleton-v1/build/cubemars_v1/build install --record /home/rhitam/exoskeleton-v1/build/cubemars_v1/install.log --single-version-externally-managed install_data
